@@ -11,6 +11,39 @@
     <div id="exemplo">
         {{palavra}}
     </div>
+    <br>
+    Aula do dia 29/06 <br>
+    <br>
+    <div id="app">
+        <div v-if="mostra">
+            Teste do "v-if"
+        </div>
+        <div v-else>
+            Senão, teste
+        </div>
+        <div v-if="qnt > 30">
+            Muitos ingressos disponíveis!
+        </div>
+        <div v-else-if="qnt > 0">
+            Ingressos quase acabando!
+        </div>
+        <div v-else>
+            Os ingressos acabaram.
+        </div>
+        <div v-show="mostra">
+            Teste do "v-show"
+        </div>
+        <ul>
+            <li v-for="nome in nomes">{{nome}}</li>
+        </ul>
+        <ol>
+            <li v-for="aluno in alunos" :key="aluno.id">
+                <div v-if="aluno.id % 2 == 0">
+                    {{aluno.id}} - {{aluno.nome}}
+                </div>
+            </li>
+        </ol>
+    </div>
 </body>
 <script src="logica.js"></script>
 </html>
